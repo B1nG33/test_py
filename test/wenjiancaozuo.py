@@ -187,6 +187,30 @@ import shutil
 # print("Memory Peak: {}MB".format(mem_peak))
 
 
+'''
+修改check文件夹名
+'''
+
+# # 定义文件夹路径
+# folder_path = 'D:/test'
+#
+# # 遍历文件夹中的所有文件和文件夹
+# for root, dirs, files in os.walk(folder_path):
+#     for dir_name in dirs:
+#         # 判断文件夹名是否为check
+#         if dir_name == 'check':
+#             # 构造新的文件夹名
+#             new_dir_name = 'check1'
+#             # 获取文件夹的完整路径
+#             dir_path = os.path.join(root, dir_name)
+#             # 构造新的文件夹的完整路径
+#             new_dir_path = os.path.join(root, new_dir_name)
+#             # 重命名文件夹
+#             os.rename(dir_path, new_dir_path)
+
+
+@include
+
 
 
 
