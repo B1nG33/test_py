@@ -208,8 +208,32 @@ import shutil
 #             # 重命名文件夹
 #             os.rename(dir_path, new_dir_path)
 
+'''
+获取最后一行
+'''
+# # 定义目标文件夹路径
+# target_dir = 'D:/test'
+#
+# # 遍历目标文件夹下所有文件夹
+# for root, dirs, files in os.walk(target_dir):
+#     # 判断当前文件夹名是否为目标文件夹中的1、2、5文件夹，如果不是则跳过
+#     if os.path.basename(root) not in ['1', '2', '5']:
+#         continue
+#     # 判断当前文件夹中是否有名为check1的文件夹，如果没有则跳过
+#     if 'check1' not in dirs:
+#         continue
+#     # 获取check1文件夹中的result.txt文件路径
+#     result_file_path = os.path.join(root, 'check1', 'result.txt')
+#     # 判断文件是否存在，如果不存在则跳过
+#     if not os.path.exists(result_file_path):
+#         continue
+#     # 打开文件，获取最后一行内容
+#     with open(result_file_path, 'r') as f:
+#         last_line = f.readlines()[-1]
+#         print(last_line.strip())  # 输出最后一行内容（去除行末换行符）
+#         break  # 找到符合条件的文件后直接结束循环
 
-@include
+
 
 
 

@@ -5,7 +5,7 @@ import psutil
 # 取 id = 1-100 的整数 生成列表
 # p = [i for i in range(1, 101)]
 
-p = [1, 2, 4]
+p = [146, 155]
 
 path_list = [f'D:/test_list/grid_test/{item}' for item in p]
 
@@ -19,7 +19,7 @@ for path in path_list:
         start_time = time.time()
 
         p = subprocess.Popen(
-            ['D:/test_list/pigrid/PiGrid_APPV2.1.2.260.exe'], cwd=path,
+            ['D:/test_list/pigrid/PiGrid_APPV2.1.2.288.exe'], cwd=path,
             stdout=subprocess.PIPE)
 
         while True:

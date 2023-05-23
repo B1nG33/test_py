@@ -6,7 +6,7 @@ import os
 # 取 id = 1-100 的整数 生成列表
 # p = [i for i in range(1, 101)]
 
-p = [1, 2, 3, 6]
+p = [155]
 
 path_list = [f'D:/test_list/example/{item}' for item in p]
 
@@ -32,7 +32,7 @@ for path in path_list:
 
         #  cpu多核并行
         p = subprocess.Popen(
-            ['D:/test_list/msMPI/MPIEXEC/mpiexec.exe', '-n', '8', 'D:/test_list/solver/PF_AppV2.1.2.240.exe'], cwd=path,
+            ['D:/test_list/msMPI/MPIEXEC/mpiexec.exe', '-n', '8', 'D:/test_list/solver/PF_AppV2.1.2.247.exe'], cwd=path,
             stdout=subprocess.PIPE)
 
         while True:
