@@ -233,6 +233,49 @@ import shutil
 #         print(last_line.strip())  # 输出最后一行内容（去除行末换行符）
 #         break  # 找到符合条件的文件后直接结束循环
 
+'''
+对比两组列表，通过设定误差来输出校验结果
+'''
+# def verify(list1, list2, tolerance):
+#     """
+#     对比两个列表中的数值，如果误差小于tolerance则输出‘验证通过’，否则输出‘验证失败’
+#     """
+#     for i in range(len(list1)):
+#         if abs(list1[i] - list2[i]) >= tolerance:
+#             print("验证失败")
+#             return
+#     print("验证通过")
+
+
+'''
+linux环境运行windows执行程序
+'''
+
+## wine /path/to/your/exe/file.exe
+
+'''
+提取结果
+'''
+# import os
+# import glob
+#
+# # 获取所有名字为check的文件夹路径
+# folders = glob.glob('D:/ceshi/example/**/check2.5', recursive=True)
+#
+# # 遍历每个文件夹
+# for folder in folders:
+#     # 获取x.txt和y.txt的路径
+#     x_path = os.path.join(folder, 'Verbose', 'monitor_force.txt')
+#     y_path = os.path.join(folder, 'Verbose', 'monitor_forceMoment.txt')
+#     # 读取最后一行
+#     with open(x_path, 'r') as f1, open(y_path, 'r') as f2:
+#         x_last_line = f1.readlines()[-1]
+#         y_last_line = f2.readlines()[-1]
+#     # 将最后一行写入result.txt
+#     with open('D:/ceshi/result/2.5.txt', 'a') as f:
+#         f.write(x_last_line.strip() + '\n')
+#         f.write(y_last_line.strip() + '\n')
+
 
 
 
