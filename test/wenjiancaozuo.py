@@ -1,5 +1,7 @@
 import os
 import shutil
+import glob
+import fileinput
 
 '''
   导入数据库数据
@@ -144,48 +146,6 @@ import shutil
 #     if os.path.exists(mesh_folder):
 #         shutil.rmtree(mesh_folder)
 
-'''
- 提取结果文件到result
-'''
-
-# # 定义读取文件内容的函数
-# def read_file(file_path):
-#     with open(file_path, 'r') as f:
-#         return f.read()
-#
-# # 获取grid文件夹路径
-# grid_path = 'd:/test_list/result/grid'
-#
-# # 获取result文件夹路径
-# result_path = 'd:/test_list/result'
-#
-# # 遍历grid文件夹下所有txt文件，并将内容写入result.txt文件中
-# with open(os.path.join(result_path, 'result.txt'), 'w') as result_file:
-#     for file_name in os.listdir(grid_path):
-#         if file_name.endswith('.txt'):
-#             file_path = os.path.join(grid_path, file_name)
-#             file_content = read_file(file_path)
-#             result_file.write(file_content+"\n\n")
-
-
-'''
-获取性能
-'''
-# # 获取进程ID
-# pid = 1234
-#
-# # 获取进程对象
-# p = psutil.Process(pid)
-#
-# # 获取进程的CPU峰值
-# cpu_peak = p.cpu_percent(interval=1)
-#
-# # 获取进程的内存峰值
-# mem_peak = p.memory_info().peak / 1024 / 1024
-#
-# print("CPU Peak: {}%".format(cpu_peak))
-# print("Memory Peak: {}MB".format(mem_peak))
-
 
 '''
 修改check文件夹名
@@ -207,31 +167,6 @@ import shutil
 #             new_dir_path = os.path.join(root, new_dir_name)
 #             # 重命名文件夹
 #             os.rename(dir_path, new_dir_path)
-
-'''
-获取最后一行
-'''
-# # 定义目标文件夹路径
-# target_dir = 'D:/test'
-#
-# # 遍历目标文件夹下所有文件夹
-# for root, dirs, files in os.walk(target_dir):
-#     # 判断当前文件夹名是否为目标文件夹中的1、2、5文件夹，如果不是则跳过
-#     if os.path.basename(root) not in ['1', '2', '5']:
-#         continue
-#     # 判断当前文件夹中是否有名为check1的文件夹，如果没有则跳过
-#     if 'check1' not in dirs:
-#         continue
-#     # 获取check1文件夹中的result.txt文件路径
-#     result_file_path = os.path.join(root, 'check1', 'result.txt')
-#     # 判断文件是否存在，如果不存在则跳过
-#     if not os.path.exists(result_file_path):
-#         continue
-#     # 打开文件，获取最后一行内容
-#     with open(result_file_path, 'r') as f:
-#         last_line = f.readlines()[-1]
-#         print(last_line.strip())  # 输出最后一行内容（去除行末换行符）
-#         break  # 找到符合条件的文件后直接结束循环
 
 '''
 对比两组列表，通过设定误差来输出校验结果
@@ -256,26 +191,23 @@ linux环境运行windows执行程序
 '''
 提取结果
 '''
-# import os
-# import glob
+
+# folders = glob.glob('D:/test_list/example/**/check', recursive=True)
 #
-# # 获取所有名字为check的文件夹路径
-# folders = glob.glob('D:/ceshi/example/**/check2.5', recursive=True)
-#
-# # 遍历每个文件夹
 # for folder in folders:
-#     # 获取x.txt和y.txt的路径
 #     x_path = os.path.join(folder, 'Verbose', 'monitor_force.txt')
 #     y_path = os.path.join(folder, 'Verbose', 'monitor_forceMoment.txt')
-#     # 读取最后一行
+#     path = str(folder.split('/')[-1])
+#     path1 = path.split('\\')[-2]
+#
 #     with open(x_path, 'r') as f1, open(y_path, 'r') as f2:
-#         x_last_line = f1.readlines()[-1]
-#         y_last_line = f2.readlines()[-1]
-#     # 将最后一行写入result.txt
-#     with open('D:/ceshi/result/2.5.txt', 'a') as f:
-#         f.write(x_last_line.strip() + '\n')
-#         f.write(y_last_line.strip() + '\n')
-
+#         x_last_line = f1.readlines()[-1].strip()
+#         y_last_line = f2.readlines()[-1].strip()
+#         print(x_last_line)
+#     with open('D:/test_list/result/result.txt', 'a') as f:
+#         f.write(path1 + '\n' + x_last_line + '\n')
+#         f.write('\n' + y_last_line + '\n' + '\n')
+#         f.close()
 
 
 
