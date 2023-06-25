@@ -34,6 +34,11 @@
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\test\test_py\test" />
+    </key>
+  </component>
   <component name="RunManager" selected="Python.wenjiancaozuo">
     <configuration name="grid" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="test_py" />
