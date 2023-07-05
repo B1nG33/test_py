@@ -3,9 +3,9 @@ import time
 import psutil
 
 # 取 id = 1-100 的整数 生成列表
-# p = [i for i in range(1, 101)]
+p = [i for i in range(1, 101)]
 
-p = [146, 155]
+# p = [146, 155]
 
 path_list = [f'D:/test_list/grid_test/{item}' for item in p]
 

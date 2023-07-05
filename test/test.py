@@ -4,7 +4,7 @@ import shutil
 import os
 
 # 取 id = 1-100 的整数 生成列表
-p = [i for i in range(1, 64)]
+p = [i for i in range(1, 751)]
 # p = [1, 2, 4]
 
 a = [2.5, 2.7, 2.9, 3.1, 3.3, 3.5, 3.7, 3.9, 4.1, 4.4, 4.6, 4.8, 5.0]

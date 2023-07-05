@@ -15,9 +15,11 @@ import fileinput
 # cur.close()
 # db.close()
 
+
 '''  
   在指定路径创建名为x的 x个空文件夹  
 '''
+
 # path = r"D:\test_list\grid_test"
 # # 指定路径
 # n = 800
@@ -33,13 +35,14 @@ import fileinput
 '''
 
 # # 定义源文件路径和目标文件夹路径
-# src_file = r'D:/test_list/grid_test/1/grid.ini'
-# dst_folder = r'D:/test_list/grid_test'
+# src_file = r'D:/whq/config_yy.cfg'
+# dst_folder = r'D:/whq'
 # # 创建目标文件夹
 # # if not os.path.exists(dst_folder):
 # #     os.makedirs(dst_folder)
-# # 复制文件到目标文件夹中的1-1000个文件夹中
-# for i in range(2, 801):
+#
+# # # 复制文件到目标文件夹中的1-1000个文件夹中
+# for i in range(1, 751):
 #     dst_path = os.path.join(dst_folder, str(i))
 #     if not os.path.exists(dst_path):
 #         os.makedirs(dst_path)
@@ -68,58 +71,18 @@ import fileinput
 
 # 批量替换配置文件中的参数值
 
-# for i in range(94, 125):
+# for i in range(1, 751):
 #     folder_name = f"{i}"
-#     folder_path = os.path.join("D:/test_list/grid_test", folder_name)
+#     folder_path = os.path.join("D:/whq", folder_name)
 #     if os.path.exists(folder_path):
 #         for file_name in os.listdir(folder_path):
 #             file_path = os.path.join(folder_path, file_name)
 #             if os.path.isfile(file_path) and file_name.endswith(".ini"):
 #                 with open(file_path, "r") as f:
 #                     content = f.read()
-#                     content = content.replace("../../model/oneraM6_new.stl", "../../model/NEWJY_GUAZAI.stl")
+#                     content = content.replace("ModelName             D:\\MAKER\PIFLOW\\Project\\test1\\Grid\\stlgroup.plt", f"ModelName             {folder_name}.stl")
 #                     with open(file_path, "w") as f:
 #                         f.write(content)
-
-
-'''
-  打印出结果文件中的最后一行，可用作统计查看算例中的最后一行结果并输出到其他地方
-'''
-
-#  显示文件夹中文件结果最后一行
-
-# folders = ['1', '2']
-# for folder in folders:
-#     path = os.path.join("D:/test_list/example", folder, "check", "Verbose", "monitor_force.txt")
-#     with open(path, "r")as file:
-#         lines = file.readline()
-#         print(lines[-1])
-
-
-'''
-   批量删除文件夹列表path_list中的文件
-'''
-
-# # 列表输入
-#
-# p = [1, 2, 3, 6]
-#
-# path_list = [f'D:/test_list/example/{item}' for item in p]
-#
-# for path in path_list:
-#     if os.path.exists(os.path.join(path, 'piflow_verify.txt')):
-#         os.remove(os.path.join(path, 'piflow_verify.txt'))
-#
-#     if os.path.exists(os.path.join(path, 'pub_key')):
-#         os.remove(os.path.join(path, 'pub_key'))
-#
-#     if os.path.exists(os.path.join(path, 'restartFlowFile.dat')):
-#         os.remove(os.path.join(path, 'restartFlowFile.dat'))
-#
-#     if os.path.exists(os.path.join(path, 'signaturefile_verify')):
-#         os.remove(os.path.join(path, 'signaturefile_verify'))
-#     if os.path.exists(os.path.join(path, 'check')):
-#         shutil.rmtree(os.path.join(path, 'check'))
 
 
 '''
@@ -208,6 +171,69 @@ linux环境运行windows执行程序
 #         f.write(path1 + '\n' + x_last_line + '\n')
 #         f.write('\n' + y_last_line + '\n' + '\n')
 #         f.close()
+
+
+# # # 1. 获取所有名为1-100的txt文件
+# files = []
+# for filename in os.listdir("D:/whq"):
+#     if filename.endswith(".stl") and filename.split(".")[0] in map(str, range(1, 751)):
+#         files.append(filename)
+# # #
+# # # 2. 创建同名的1-100文件夹
+# # # for i in range(1, 1001):
+# # #     os.makedirs(f"D:/whq/{i}", exist_ok=True)
+# #
+# # 3. 移动txt文件到同名的文件夹中
+# for filename in files:
+#     src_path = f"D:/whq/{filename}"
+#     dst_path = f"D:/whq/{filename.split('.')[0]}/{filename}"
+#     shutil.move(src_path, dst_path)
+
+
+# path = r'D:/whq'  # 文件夹路径
+#
+# folders = os.listdir(path)  # 获取文件夹中所有文件夹的名字
+#
+# for folder in folders:
+#     folder_path = os.path.join(path, folder)  # 获取当前文件夹的完整路径
+#     if not os.path.isdir(folder_path):  # 如果不是文件夹，跳过
+#         continue
+#     grid_path = os.path.join(folder_path, 'grid.ini')  # 获取文件的路径
+#     if not os.path.isfile(grid_path):  # 如果x.txt文件不存在，跳过
+#         continue
+#     with open(grid_path, 'r') as f:
+#         lines = f.readlines()
+#     with open(grid_path, 'w') as f:
+#         for line in lines:
+#             if 'ModelName             D:\MAKER\PIFLOW\Project\test1\Grid\stlgroup.plt' in line:
+#                 line = line.replace('ModelName             D:\MAKER\PIFLOW\Project\test1\Grid\stlgroup.plt', f'ModelName             {folder}.stl')
+#             f.write(line)
+
+
+# import tkinter as tk
+# import os
+# import time
+# import pyautogui
+#
+# def click_start_game():
+#     os.startfile("D:\\game.exe")  # 打开游戏主程序
+#     time.sleep(5)  # 等待游戏窗口打开
+#     x, y = pyautogui.locateCenterOnScreen("start_game.png")  # 在屏幕上查找“开始游戏”按钮的位置
+#     pyautogui.click(x, y)  # 点击“开始游戏”按钮
+#
+# if __name__ == "__main__":
+#     root = tk.Tk()
+#     root.geometry("200x100")
+#     button = tk.Button(root, text="开始游戏", command=click_start_game)
+#     button.pack(pady=10)
+#     root.mainloop()
+
+
+
+
+
+
+
 
 
 
