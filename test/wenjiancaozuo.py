@@ -229,6 +229,21 @@ linux环境运行windows执行程序
 #     root.mainloop()
 
 
+dir_path = r"F:\test"
+for i in range(1, 6):  # 遍历 1-5 的文件夹
+    dir_name = str(i)
+    dir_full_path = os.path.join(dir_path, dir_name)
+
+    if os.path.isdir(dir_full_path):
+        has_mesh_dir = False  # 标记是否存在名为Mesh的文件夹
+        for sub_dir_name in os.listdir(dir_full_path):
+            sub_dir_full_path = os.path.join(dir_full_path, sub_dir_name)
+            if os.path.isdir(sub_dir_full_path) and sub_dir_name == "Mesh":
+                has_mesh_dir = True
+                break  # 如果存在名为Mesh的文件夹，则不用继续查找
+
+        if not has_mesh_dir:
+            print(dir_full_path)  # 如果不存在名为Mesh的文件夹，则输出该文件夹路径
 
 
 
