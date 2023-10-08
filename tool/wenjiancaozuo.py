@@ -37,10 +37,7 @@ import fileinput
 # # 定义源文件路径和目标文件夹路径
 # src_file = r'D:/whq/config_yy.cfg'
 # dst_folder = r'D:/whq'
-# # 创建目标文件夹
-# # if not os.path.exists(dst_folder):
-# #     os.makedirs(dst_folder)
-#
+
 # # # 复制文件到目标文件夹中的1-1000个文件夹中
 # for i in range(1, 751):
 #     dst_path = os.path.join(dst_folder, str(i))
@@ -209,41 +206,39 @@ linux环境运行windows执行程序
 #                 line = line.replace('ModelName             D:\MAKER\PIFLOW\Project\test1\Grid\stlgroup.plt', f'ModelName             {folder}.stl')
 #             f.write(line)
 
-
-# import tkinter as tk
-# import os
-# import time
-# import pyautogui
+'''
+查找没有Mesh的算例
+'''
+# dir_path = r"F:\test"
+# for i in range(1, 6):  # 遍历 1-5 的文件夹
+#     dir_name = str(i)
+#     dir_full_path = os.path.join(dir_path, dir_name)
 #
-# def click_start_game():
-#     os.startfile("D:\\game.exe")  # 打开游戏主程序
-#     time.sleep(5)  # 等待游戏窗口打开
-#     x, y = pyautogui.locateCenterOnScreen("start_game.png")  # 在屏幕上查找“开始游戏”按钮的位置
-#     pyautogui.click(x, y)  # 点击“开始游戏”按钮
+#     if os.path.isdir(dir_full_path):
+#         has_mesh_dir = False  # 标记是否存在名为Mesh的文件夹
+#         for sub_dir_name in os.listdir(dir_full_path):
+#             sub_dir_full_path = os.path.join(dir_full_path, sub_dir_name)
+#             if os.path.isdir(sub_dir_full_path) and sub_dir_name == "Mesh":
+#                 has_mesh_dir = True
+#                 break  # 如果存在名为Mesh的文件夹，则不用继续查找
 #
-# if __name__ == "__main__":
-#     root = tk.Tk()
-#     root.geometry("200x100")
-#     button = tk.Button(root, text="开始游戏", command=click_start_game)
-#     button.pack(pady=10)
-#     root.mainloop()
+#         if not has_mesh_dir:
+#             print(dir_full_path)  # 如果不存在名为Mesh的文件夹，则输出该文件夹路径
 
 
-dir_path = r"F:\test"
-for i in range(1, 6):  # 遍历 1-5 的文件夹
-    dir_name = str(i)
-    dir_full_path = os.path.join(dir_path, dir_name)
+'''
+查找算例结果数据
+'''
 
-    if os.path.isdir(dir_full_path):
-        has_mesh_dir = False  # 标记是否存在名为Mesh的文件夹
-        for sub_dir_name in os.listdir(dir_full_path):
-            sub_dir_full_path = os.path.join(dir_full_path, sub_dir_name)
-            if os.path.isdir(sub_dir_full_path) and sub_dir_name == "Mesh":
-                has_mesh_dir = True
-                break  # 如果存在名为Mesh的文件夹，则不用继续查找
-
-        if not has_mesh_dir:
-            print(dir_full_path)  # 如果不存在名为Mesh的文件夹，则输出该文件夹路径
+# num = input("请输入想要查看的算例编号：")
+# with open("算例结果.txt", "r") as f:
+#     contents = f.readlines()
+# for i, line in enumerate(contents):
+#     if num in line.strip() and line.strip() == num:
+#         line1 = contents[i+1].strip()
+#         line2 = contents[i+3].strip()
+#         print("找到如下结果" + "\n" + "force为：" + line1)
+#         print("forceMoment为：" + line2)
 
 
 
