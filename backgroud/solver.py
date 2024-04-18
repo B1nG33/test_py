@@ -4,9 +4,9 @@ import psutil
 import os
 
 # 取 id = 1-100 的整数 生成列表
-# p = [i for i in range(1, 101)]
+p = [i for i in range(1, 101)]
 
-p = [155]
+# p = [155]
 
 path_list = [f'D:/test_list/example/{item}' for item in p]
 
@@ -49,20 +49,20 @@ for path in path_list:
         success = False
 
     # 获取耗时及性能峰值
-    end_time = time.time()
-    duration = end_time - start_time
-    process = psutil.Process()
-    peak_memory_usage = process.memory_info().peak_wset
+    # end_time = time.time()
+    # duration = end_time - start_time
+    # process = psutil.Process()
+    # peak_memory_usage = process.memory_info().peak_wset
 
     # 将监控到的信息输出到指定结果文件夹中
 
     # 根据算例id创建结果文件夹，记录结果信息
-    if success:
-        with open('D:/test_list/result/solver/%d.txt' % i, 'w') as f:
-            f.write('算例id %d 执行成功，耗时：%f秒，性能峰值：%fKB' % (i, duration, peak_memory_usage))
-    else:
-        with open('D:/test_list/result/solver/%d.txt' % i, 'w') as f:
-            f.write('算例id %d 执行失败' % i)
+    # if success:
+    #     with open('D:/test_list/result/solver/%d.txt' % i, 'w') as f:
+    #         f.write('算例id %d 执行成功，耗时：%f秒，性能峰值：%fKB' % (i, duration, peak_memory_usage))
+    # else:
+    #     with open('D:/test_list/result/solver/%d.txt' % i, 'w') as f:
+    #         f.write('算例id %d 执行失败' % i)
 
     # 直接存入result.txt中
     # if success:

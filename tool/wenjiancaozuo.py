@@ -158,6 +158,7 @@ linux环境运行windows执行程序
 #     x_path = os.path.join(folder, 'Verbose', 'monitor_force.txt')
 #     y_path = os.path.join(folder, 'Verbose', 'monitor_forceMoment.txt')
 #     path = str(folder.split('/')[-1])
+#     print(path)
 #     path1 = path.split('\\')[-2]
 #
 #     with open(x_path, 'r') as f1, open(y_path, 'r') as f2:
