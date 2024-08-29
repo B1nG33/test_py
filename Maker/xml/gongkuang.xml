@@ -1,0 +1,16 @@
+<!--SolverParamsInFo:���������ļ����ڵ�-->
+<!--Mach :������ڵ� ��rang-value��single-value-list ����-->
+<!--AOA :���ǽڵ� ��rang-value��single-value-list ����-->
+<!--AOS :�໬�ǽڵ� ��rang-value��single-value-list ����-->
+<!--rang-value:�������ϸ���  [min,max,step] ��ʽ���룻�����Կ��Բ�����-->
+<!--single-value-list:�������ϸ��� value1,value2,value3,... ��ʽ���룻�����Կ��Բ�����-->
+<!--PTlist:�¶ȡ�ѹ���������б�ڵ�-->
+<!--PT:�¶ȡ�ѹ�������Խڵ㣬��p��t�������ԣ�p��ʾ�¶ȣ�t��ʾѹ����p��t�������Զ����Բ����ã���������Ĭ��ʹ��0��Ϊ����ֵ-->
+<SolverParamsInFo>
+    <Mach range-value="[2,3,1]" single-value-list=""/>
+    <AOA range-value="" single-value-list=""/>
+    <AOS range-value="" single-value-list=""/>
+      <PTlist>
+    <PT p="10147.68" t="188.33"/>
+	  </PTlist>
+</SolverParamsInFo>

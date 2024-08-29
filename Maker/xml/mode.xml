@@ -1,0 +1,7 @@
+<!--ModeInfo:����ģʽ���ø��ڵ�-->
+<!--Cpu :cpu���� ��Cores-value �������ѡ�� ����-->
+<!--GPU :gpu���� ��Select-value ѡ������1��������0�رգ�����gpu��Ĭ�Ϲر�cpu���㷽ʽ ����-->
+<ModeInfo>
+  <Cpu Cores-value="1"/>
+  <Gpu Select-value="0"/>
+</ModeInfo>

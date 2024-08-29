@@ -1,0 +1,20 @@
+<!--xml��ʽ��������ƫ�����ļ�-->
+<!-- TransInfo:�����ļ����ڵ�-->
+<!-- PartList:ģ�Ͳ��������б�ڵ�-->
+<!-- PartItem :ģ�Ͳ��������ýڵ㣬����name��index��filename��start_vec��end_vec���ԣ�����name��filenameΪ�������ԣ��������Կɲ�д�򲻸�ֵ-->
+<!-- PartItem name="ģ�Ͳ�������"��������Ϊ��������,���ڸ�ģ�Ͳ���������������������PartItem��name�ظ����������ظ�ֻ��ȡ�������״������Ĳ���" index="ģ�Ͳ�����ģ���ļ��е�˳��id;���ļ�ֻ��һ�����������Բ�д;
+������ֵĬ��Ϊ0" filename="ģ�Ͳ��������ļ�����" start_vec="��ת���������ֵ���ɲ�д�����ԣ�Ĭ��ֵΪ��0.0��0.0,0.0��;�ϸ��ո�ʽд��" end_vec="��ת���յ�����ֵ���ɲ�д�����ԣ�Ĭ��ֵΪ��1.0��0.0,0.0��;�ϸ��ո�ʽд��"-->
+<!-- TransItemList:�任�����Ƕ���Ϣ����б��б����Ĭ�ϰ���PartList�²����������У����ĳ������δ����任�����Ҫ���Ƕ���Ϣ��ʾָ��Ϊ0����ռλ�����������б������ĽǶ����ݽ�������-->
+<TransInfo>
+  <PartList>
+    <PartItem name="part1" filename="duo1.stl" start_vec="(3.5,0.0,0.0)" end_vec="(3.5,1.0,1.0)"/>
+    <PartItem name="part2" filename="duo2.stl" start_vec="(3.5,0.0,0.0)" end_vec="(3.5,-1.0,1.0)"/>
+    <PartItem name="part3" filename="duo3.stl" start_vec="(3.5,0.0,0.0)" end_vec="(3.5,-1.0,-1.0)"/>
+    <PartItem name="part4" filename="duo4.stl" start_vec="(3.5,0.0,0.0)" end_vec="(3.5,-1.0,-1.0)"/>
+  </PartList>
+  <TransItemList>
+    10  15	-10	-15
+    2	5	-2	-5
+    8	12	-8	-12
+  </TransItemList>
+</TransInfo>

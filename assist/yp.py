@@ -13,8 +13,8 @@ for i in x:
         b.append(1 - num * math.sin(5 * 3.1415926 / 180))
     c = [math.cos(5 * 3.1415926 / 180) * i for i in y]
 
-    value1 = (0,a[0],0)
-    value2 = (b[0],0,c[0])
+    value1 = (0, a[0], 0)
+    value2 = (b[0], 0, c[0])
 
     os.chdir('G:/MRF/test')
 
